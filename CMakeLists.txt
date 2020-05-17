@@ -1,10 +1,6 @@
 cmake_minimum_required(VERSION 3.8)
 
-project(cmake VERSION 0.0.1)
-
-set(BOOST_INCLUDEDIR $(BOOST_ROOT))
-
-set(BOOST_LIBRARYDIR $(BOOST_ROOT)/stage/lib)
+project(cmake VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
 
 find_package(Threads REQUIRED)
 find_package(Boost COMPONENTS unit_test_framework REQUIRED)
